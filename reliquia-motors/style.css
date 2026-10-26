@@ -1,0 +1,830 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3eee6;
+    color: #292522;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+
+.header {
+    background: #251e1b;
+    color: white;
+    padding: 16px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > span {
+    font-size: 34px;
+}
+
+.logo h1 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+}
+
+.logo small {
+    color: #c8a568;
+    font-size: 11px;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header nav a {
+    color: #eee7df;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: #c8a568;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+
+.hero {
+    min-height: 650px;
+
+    background:
+        linear-gradient(
+            rgba(25, 20, 18, 0.70),
+            rgba(25, 20, 18, 0.70)
+        ),
+        url("img/mustang.png");
+
+    background-color: #251e1b;
+    background-repeat: no-repeat;
+    background-size: cover, 55%;
+    background-position: center, right 5% center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 7%;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.tag,
+.titulo {
+    color: #bd9657;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    line-height: 1.05;
+    margin: 18px 0;
+}
+
+.hero p {
+    color: #e4ddd5;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+
+.btn {
+    display: inline-block;
+    background: #8a2937;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 13px 22px;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #6f202c;
+    transform: translateY(-2px);
+}
+
+.btn.secundario {
+    background: transparent;
+    border: 1px solid #8a2937;
+    color: #8a2937;
+}
+
+.btn.secundario:hover {
+    background: #8a2937;
+    color: white;
+}
+
+
+
+.sobre {
+    padding: 100px 7%;
+
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.sobre-texto,
+.sobre-box {
+    flex: 1;
+}
+
+.sobre h2,
+.section-title h2,
+.contato h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 12px 0 20px;
+}
+
+.sobre p {
+    color: #68605a;
+    margin-bottom: 15px;
+}
+
+.sobre-box {
+    min-height: 350px;
+
+    background:
+        linear-gradient(
+            rgba(48, 39, 35, 0.9),
+            rgba(48, 39, 35, 0.9)
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 100px;
+}
+
+
+
+.numeros {
+    background: #8a2937;
+    color: white;
+
+    padding: 50px 7%;
+
+    display: flex;
+    justify-content: space-around;
+
+    text-align: center;
+}
+
+.numeros div {
+    display: flex;
+    flex-direction: column;
+}
+
+.numeros strong {
+    font-family: Georgia, serif;
+    color: #e1c48e;
+    font-size: 38px;
+}
+
+.numeros span {
+    font-size: 14px;
+}
+
+
+
+.catalogo,
+.cadastro,
+.clientes,
+.contato {
+    padding: 90px 7%;
+}
+
+.section-title {
+    margin-bottom: 35px;
+}
+
+.section-title p {
+    color: #6b625b;
+}
+
+
+.filtros {
+    background: #fffdf9;
+    border: 1px solid #dfd6ca;
+
+    padding: 20px;
+
+    margin-bottom: 35px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filtros input,
+.filtros select {
+    flex: 1;
+    min-width: 190px;
+}
+
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d5ccc1;
+    border-radius: 4px;
+
+    background: #fffdf9;
+    color: #292522;
+
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #8a2937;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+
+.lista-carros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card-carro {
+    background: #fffdf9;
+
+    border: 1px solid #ded5ca;
+
+    width: calc(33.333% - 17px);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.card-carro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.carro-imagem {
+    height: 220px;
+    background: #fff;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.carro-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carro-info {
+    padding: 20px;
+}
+
+.carro-info .ano {
+    color: #8a2937;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.carro-info h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    margin: 5px 0;
+}
+
+.carro-info p {
+    color: #716a64;
+    font-size: 14px;
+}
+
+.preco {
+    font-size: 21px;
+    font-weight: bold;
+    display: block;
+    margin: 15px 0;
+}
+
+.detalhes {
+    font-size: 13px;
+    color: #625b55;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-top: 10px;
+}
+
+.detalhes span {
+    background: #eee8df;
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.disponivel {
+    background: #dcebdc;
+    color: #2e6635;
+}
+
+.vendido {
+    background: #f0d9d9;
+    color: #8a2937;
+}
+
+.placa {
+    color: #9a7435;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.acoes button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-detalhes {
+    background: #302622;
+    color: white;
+}
+
+.btn-simular {
+    background: #8a2937;
+    color: white;
+}
+
+.btn-vendido {
+    background: #e4d7c8;
+    color: #4d433d;
+}
+
+.btn-excluir {
+    background: #ead5d5;
+    color: #8a2937;
+}
+
+
+.formulario {
+    max-width: 950px;
+
+    background: #fffdf9;
+
+    padding: 30px;
+
+    border: 1px solid #dfd6ca;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario select {
+    width: calc(50% - 8px);
+}
+
+.formulario textarea {
+    width: 100%;
+}
+
+.formulario button {
+    margin-top: 5px;
+}
+
+
+
+.lista-clientes {
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cliente {
+    background: #fffdf9;
+
+    border-left: 4px solid #8a2937;
+
+    padding: 18px;
+
+    min-width: 260px;
+    flex: 1;
+}
+
+.cliente h3 {
+    font-family: Georgia, serif;
+}
+
+.cliente p {
+    color: #6c645d;
+    font-size: 14px;
+}
+
+
+
+.contato {
+    background: #302622;
+    color: white;
+
+    display: flex;
+    gap: 70px;
+}
+
+.contato-texto,
+.contato-form {
+    flex: 1;
+}
+
+.contato-texto p {
+    color: #d0c7be;
+    margin: 8px 0;
+}
+
+.contato-form {
+    background: #fffdf9;
+}
+
+
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 2000;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-content {
+    background: #fffdf9;
+
+    width: 100%;
+    max-width: 650px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    position: relative;
+
+    border-radius: 5px;
+}
+
+.fechar {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin: 8px 0;
+}
+
+
+
+footer {
+    background: #1c1715;
+    color: white;
+}
+
+.footer-content {
+    padding: 55px 7%;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer-content > div {
+    flex: 1;
+}
+
+.footer-content h2 {
+    color: #c8a568;
+    font-family: Georgia, serif;
+}
+
+.footer-content h3 {
+    color: #c8a568;
+    margin-bottom: 12px;
+}
+
+.footer-content a {
+    display: block;
+    color: #c1b8b1;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-content p {
+    color: #c1b8b1;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #39312c;
+    padding: 18px;
+    text-align: center;
+    color: #938b84;
+    font-size: 12px;
+}
+
+
+@media (max-width: 950px) {
+
+    .card-carro {
+        width: calc(50% - 13px);
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .sobre {
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .header nav {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: #251e1b;
+
+        flex-direction: column;
+        align-items: center;
+
+        padding: 25px;
+
+        gap: 20px;
+    }
+
+    .header nav.ativo {
+        display: flex;
+    }
+
+    .logo h1 {
+        font-size: 17px;
+    }
+
+    .logo small {
+        font-size: 9px;
+    }
+
+
+    .hero {
+        min-height: 570px;
+        padding: 50px 7%;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    .sobre {
+        flex-direction: column;
+        padding: 65px 7%;
+    }
+
+    .sobre h2,
+    .section-title h2,
+    .contato h2 {
+        font-size: 31px;
+    }
+
+    .sobre-box {
+        width: 100%;
+        min-height: 250px;
+    }
+
+
+    .numeros {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    .catalogo,
+    .cadastro,
+    .clientes,
+    .contato {
+        padding: 65px 7%;
+    }
+
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtros input,
+    .filtros select {
+        width: 100%;
+    }
+
+
+    .card-carro {
+        width: 100%;
+    }
+
+
+    .formulario {
+        padding: 20px;
+    }
+
+    .formulario input,
+    .formulario select {
+        width: 100%;
+    }
+
+
+    .contato {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+        padding: 45px 7%;
+    }
+
+}
+
+/* ===== Ajustes para as imagens ===== */
+.sobre-box img {
+    width: 85%;
+}
+
+.contato-form {
+    padding: 25px;
+    flex-direction: column;
+}
+
+.contato-form input,
+.contato-form select,
+.contato-form textarea {
+    width: 100%;
+}
+
+@media (max-width: 950px) {
+    .hero {
+        background-size: cover, 80%;
+        background-position: center, center bottom;
+    }
+}
+
+
+/* ===== Logo ===== */
+.logo img {
+    height: 52px;
+    width: auto;
+}
+
+.footer-content h2 img.logo-rodape {
+    height: 36px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 6px;
+}

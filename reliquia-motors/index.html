@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Relíquia Motors</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Relíquia Motors">
+
+            <div>
+                <h1>Relíquia Motors</h1>
+                <small>Clássicos que contam histórias</small>
+            </div>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <nav id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <span class="tag">RELÍQUIA MOTORS</span>
+
+                <h2>Clássicos que<br>contam histórias.</h2>
+
+                <p>
+                    Carros que atravessaram décadas e continuam
+                    despertando admiração.
+                </p>
+
+                <a href="#catalogo" class="btn">
+                    Ver catálogo
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="sobre" id="sobre">
+
+            <div class="sobre-texto">
+
+                <span class="titulo">NOSSA HISTÓRIA</span>
+
+                <h2>
+                    Mais do que carros,<br>
+                    histórias para guardar.
+                </h2>
+
+                <p>
+                    A Relíquia Motors é uma concessionária fictícia
+                    especializada em veículos antigos e clássicos.
+                </p>
+
+                <p>
+                    Nosso sistema foi criado para facilitar a consulta
+                    dos veículos, informações dos carros, clientes
+                    interessados e simulações de compra.
+                </p>
+
+            </div>
+
+            <div class="sobre-box">
+                <img src="img/kombi.png" alt="Kombi clássica">
+            </div>
+
+        </section>
+
+
+        <section class="numeros">
+
+            <div>
+                <strong>12</strong>
+                <span>Veículos no catálogo</span>
+            </div>
+
+            <div>
+                <strong>10+</strong>
+                <span>Anos de história</span>
+            </div>
+
+            <div>
+                <strong>500+</strong>
+                <span>Clientes atendidos</span>
+            </div>
+
+        </section>
+
+
+        <section class="catalogo" id="catalogo">
+
+            <div class="section-title">
+
+                <span class="titulo">NOSSO ESTOQUE</span>
+
+                <h2>Clássicos disponíveis</h2>
+
+                <p>
+                    Encontre um veículo que combine com você.
+                </p>
+
+            </div>
+
+
+            <div class="filtros">
+
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Pesquise por marca, modelo ou ano..."
+                >
+
+                <select id="filtroMarca">
+                    <option value="">Todas as marcas</option>
+                </select>
+
+                <select id="filtroCambio">
+                    <option value="">Todos os câmbios</option>
+                </select>
+
+                <select id="filtroPlaca">
+                    <option value="">Placa de coleção</option>
+                    <option value="Sim">Com placa de coleção</option>
+                    <option value="Não">Sem placa de coleção</option>
+                </select>
+
+                <button id="limparFiltros" class="btn secundario">
+                    Limpar filtros
+                </button>
+
+            </div>
+
+
+            <div id="listaCarros" class="lista-carros"></div>
+
+        </section>
+
+
+        <section class="cadastro">
+
+            <div class="section-title">
+
+                <span class="titulo">ESTOQUE</span>
+
+                <h2>Cadastrar novo veículo</h2>
+
+                <p>
+                    Adicione um carro ao catálogo para testar o sistema.
+                </p>
+
+            </div>
+
+
+            <form id="formCarro" class="formulario">
+
+                <input
+                    type="text"
+                    id="marca"
+                    placeholder="Marca"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="modelo"
+                    placeholder="Modelo"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="ano"
+                    placeholder="Ano"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="quilometragem"
+                    placeholder="Quilometragem"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="motor"
+                    placeholder="Motor"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="cambio"
+                    placeholder="Câmbio"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="combustivel"
+                    placeholder="Combustível"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="cor"
+                    placeholder="Cor"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="preco"
+                    placeholder="Preço"
+                    required
+                >
+
+                <select id="placaColecao" required>
+                    <option value="">Possui placa de coleção?</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+
+                <textarea
+                    id="descricao"
+                    placeholder="Descrição do veículo"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Cadastrar veículo
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="clientes" id="clientes">
+
+            <div class="section-title">
+
+                <span class="titulo">ATENDIMENTO</span>
+
+                <h2>Clientes interessados</h2>
+
+                <p>
+                    Cadastre pessoas interessadas em algum veículo.
+                </p>
+
+            </div>
+
+
+            <form id="formCliente" class="formulario">
+
+                <input
+                    type="text"
+                    id="nomeCliente"
+                    placeholder="Nome"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="telefoneCliente"
+                    placeholder="Telefone"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="emailCliente"
+                    placeholder="E-mail"
+                    required
+                >
+
+                <select id="carroInteresse" required>
+                    <option value="">
+                        Selecione o veículo de interesse
+                    </option>
+                </select>
+
+                <button type="submit" class="btn">
+                    Cadastrar cliente
+                </button>
+
+            </form>
+
+
+            <div id="listaClientes" class="lista-clientes"></div>
+
+        </section>
+
+
+        <section class="contato" id="contato">
+
+            <div class="contato-texto">
+
+                <span class="titulo">FALE CONOSCO</span>
+
+                <h2>Tem um clássico em mente?</h2>
+
+                <p>
+                    Entre em contato com a nossa equipe.
+                </p>
+
+                <p>📞 (11) 4000-2026</p>
+                <p>📱 (11) 99999-2026</p>
+                <p>✉️ contato@reliquiamotors.com.br</p>
+                <p>📷 @reliquiamotors</p>
+
+            </div>
+
+
+            <form id="formContato" class="formulario contato-form">
+
+                <input
+                    type="text"
+                    id="nomeContato"
+                    placeholder="Seu nome"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="emailContato"
+                    placeholder="Seu e-mail"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="carroContato"
+                    placeholder="Carro de interesse"
+                    required
+                >
+
+                <textarea
+                    id="mensagemContato"
+                    placeholder="Mensagem"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Enviar mensagem
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2><img src="img/logo.png" alt="" class="logo-rodape"> Relíquia Motors</h2>
+
+                <p>
+                    Clássicos que contam histórias.
+                </p>
+            </div>
+
+            <div>
+                <h3>Navegação</h3>
+
+                <a href="#inicio">Início</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+
+                <p>(11) 4000-2026</p>
+                <p>contato@reliquiamotors.com.br</p>
+                <p>@reliquiamotors</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Relíquia Motors — Projeto acadêmico demonstrativo.
+        </div>
+
+    </footer>
+
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="fecharModal" class="fechar">
+                ×
+            </button>
+
+            <div id="conteudoModal"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
