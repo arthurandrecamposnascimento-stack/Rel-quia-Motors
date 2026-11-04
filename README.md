@@ -4,8 +4,6 @@
 
 Projeto acadêmico demonstrativo de um sistema web para uma concessionária fictícia de veículos antigos e clássicos.
 
-🔗 Repositório: [Rel-quia-Motors](https://github.com/arthurandrecamposnascimento-stack/Rel-quia-Motors)
-
 
 ## 1. Descrição do projeto
 
