@@ -1,9 +1,9 @@
-const menuBtn = document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn"); //procura dentro do html
 const menu = document.getElementById("menu");
 
 menuBtn.addEventListener("click", function () {
 
-    menu.classList.toggle("ativo");
+    menu.classList.toggle("ativo"); //sem a necessidade de add ou remover 
 
     if (menu.classList.contains("ativo")) {
         menuBtn.textContent = "✕";
@@ -15,7 +15,7 @@ menuBtn.addEventListener("click", function () {
 
 
 
-let carros = [
+let carros = [ //array memória 
 
     {
         id: 1,
@@ -269,7 +269,7 @@ function formatarPreco(valor) {
 
 
 
-function mostrarCarros(lista = carros) {
+function mostrarCarros(lista = carros) { //limpa cards antes de exibir o novo 
 
     listaCarros.innerHTML = "";
 
@@ -285,16 +285,16 @@ function mostrarCarros(lista = carros) {
     }
 
 
-    lista.forEach(function (carro) {
+    lista.forEach(function (carro) { //passa por todos e cria um novo 
 
-        const card = document.createElement("article");
+        const card = document.createElement("article"); //article -tag semântica 
 
         card.className = "card-carro";
 
         const classeStatus =
             carro.status === "Disponível"
                 ? "disponivel"
-                : "vendido";
+                : "vendido"; //operador ternário 
 
 
         card.innerHTML = `
@@ -398,7 +398,7 @@ function mostrarCarros(lista = carros) {
 function preencherFiltros() {
 
     const marcas = [...new Set(carros.map(carro => carro.marca))];
-    const cambios = [...new Set(carros.map(carro => carro.cambio))];
+    const cambios = [...new Set(carros.map(carro => carro.cambio))]; //map- mostra set- transforma em um ...-operador spread
 
 
     marcas.forEach(function (marca) {
@@ -492,7 +492,7 @@ limparFiltros.addEventListener("click", function () {
 
 
 
-function verDetalhes(id) {
+function verDetalhes(id) { //procura o id
 
     const carro = carros.find(carro => carro.id === id);
 
@@ -500,7 +500,7 @@ function verDetalhes(id) {
     const conteudo = document.getElementById("conteudoModal");
 
 
-    conteudo.innerHTML = `
+    conteudo.innerHTML = ` //inf.html
 
         <h2>
             ${carro.marca} ${carro.modelo}
@@ -572,10 +572,10 @@ document.getElementById("fecharModal").addEventListener(
 );
 
 
-function simularCompra(id) {
+function simularCompra(id) { //linha 362 
 
     const carro = carros.find(carro => carro.id === id);
-
+//undefined- id nn encontrado 
     const modal = document.getElementById("modal");
     const conteudo = document.getElementById("conteudoModal");
 
@@ -649,7 +649,8 @@ function simularCompra(id) {
             Esta é uma simulação demonstrativa.
             Os valores não representam uma proposta real
             de financiamento.
-        </small>
+        </small> 
+        //aviso
 
     `;
 
