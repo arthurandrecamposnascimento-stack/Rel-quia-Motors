@@ -387,7 +387,7 @@ function mostrarCarros(lista = carros) { //limpa cards antes de exibir o novo
         `;
 
 
-        listaCarros.appendChild(card);
+        listaCarros.appendChild(card); //filho
 
     });
 
@@ -398,7 +398,7 @@ function mostrarCarros(lista = carros) { //limpa cards antes de exibir o novo
 function preencherFiltros() {
 
     const marcas = [...new Set(carros.map(carro => carro.marca))];
-    const cambios = [...new Set(carros.map(carro => carro.cambio))]; //map- mostra set- transforma em um ...-operador spread
+    const cambios = [...new Set(carros.map(carro => carro.cambio))]; //map- mostra set- transforma em um ...-operador spread -  distribui
 
 
     marcas.forEach(function (marca) {
