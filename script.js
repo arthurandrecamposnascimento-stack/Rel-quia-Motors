@@ -15,7 +15,7 @@ menuBtn.addEventListener("click", function () {
 
 
 
-let carros = [ //array memória 
+let carros = [ //array 
 
     {
         id: 1,
